@@ -8,7 +8,7 @@ Purpose: To create a comparator for a point object, with points closer to the or
 Pseudocode: Creates a list of points, and sorts it using Collections.sort, and uses PointComparator as a comparator.
 Point comparator finds the distances from the origin of two points, and uses Object.compareTo to compare them.
 Maintenance Log:
-
+2/4/18: Project created
 */
 
 import java.awt.Point;
