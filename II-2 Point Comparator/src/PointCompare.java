@@ -1,3 +1,16 @@
+/*
+Name: Ethan Duer
+Project Name: 11-2 Point Comparator
+File Name: 
+PointCompare.java
+PointComparator.java
+Purpose: To create a comparator for a point object, with points closer to the origin considered to come before
+Pseudocode: Creates a list of points, and sorts it using Collections.sort, and uses PointComparator as a comparator.
+Point comparator finds the distances from the origin of two points, and uses Object.compareTo to compare them.
+Maintenance Log:
+
+*/
+
 import java.awt.Point;
 import java.util.ArrayList;
 import java.util.Collections;
