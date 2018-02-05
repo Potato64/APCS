@@ -14,7 +14,8 @@ public class DualSelectionSort
 {
 	public static void main(String[] args) 
 	{
-		int[] array = {5, 7, 9, 2, 1, 2, 5, 7, 8, 10, 0, 2, 3, 5, 4, 7, 6, 1};
+		//int[] array = {5, 7, 9, 2, 1, 2, 5, 7, 8, 10, 0, 2, 3, 5, 4, 7, 6, 1};
+		int[] array = {7, 1, 3, 9, 2, 6};
 		sort(array);
 		System.out.println(Arrays.toString(array));
 	}
@@ -32,19 +33,24 @@ public class DualSelectionSort
 		int largeWall = array.length - 1;
 		for(int c = 0; c < largeWall; c++)
 		{
-			for (int i = c; i <= largeWall; i++)
+			int smallIndex = c;
+			int largeIndex = largeWall;
+			for (int i = c + 1; i <= largeWall; i++)
 			{
-				int smallIndex = array[c];
-				int largeIndex = array[largeWall];
 				int num = array[i];
-				if (num < smallIndex)
+				if (num < array[smallIndex])
 				{
-					smallIndex = num;
+					smallIndex = i;
 				}
-				if (num > largeIndex)
+				if (num > array[largeIndex])
 				{
-					largeIndex = num;
+					largeIndex = i;
 				}
+			}
+			System.out.println(Arrays.toString(array));
+			System.out.println("" + array[smallIndex] + "," + array[largeIndex]);
+			if (largeIndex != c && smallIndex != largeWall)
+			{
 				int temp = array[smallIndex];
 				array[smallIndex] = array[c];
 				array[c] = temp;
