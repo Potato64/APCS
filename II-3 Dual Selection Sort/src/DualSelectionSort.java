@@ -19,9 +19,9 @@ public class DualSelectionSort
 {
 	public static void main(String[] args) 
 	{
-		//int[] array = {5, 7, 9, 2, 1, 2, 5, 7, 8, 10, 0, 2, 3, 5, 4, 7, 6, 1};
+		int[] array = {5, 7, 9, 2, 1, 2, 5, 7, 8, 10, 0, 2, 3, 5, 4, 7, 6, 1};
 		//int[] array = {7, 1, 3, 1, 9, 2, 6, 5};
-		int[] array = {2, 1, 3};
+		//int[] array = {2, 1, 3};
 		sort(array);
 		System.out.println(Arrays.toString(array));
 	}
