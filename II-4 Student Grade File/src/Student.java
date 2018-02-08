@@ -21,6 +21,6 @@ public class Student
 	@Override
 	public String toString()
 	{
-		return lastName + "\t" + firstName + "\t\t" + idNum + "\t" + percent + "\t" + grade + suffix;
+		return lastName + "\t" + firstName + "\t" + String.format("%06d", idNum) + "\t" + percent + "\t" + grade + ((suffix != 44) ? suffix : "");
 	}
 }
