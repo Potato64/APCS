@@ -1,14 +1,16 @@
 /*
 Name: Ethan Duer
 Project Name: 12-3 Process Name
-File Name: ProcessName.java
-Purpose: To create a function that takes a scanner for the console, and gets the user's full name.
-The program then prints the name in reverse order
-Pseudocode: Pass a new scanner with the console as a parameter to a function.
-The function gets the user's name and returns it to main. A for loop prints the string character
-by character in reverse.
-Maintenance Log:
+Filename: ProcessName.java
+Purpose: To create a function that takes a scanner for the console,
+gets the user's full name, and prints the user's name in last name, first name order
+Pseudocode: Create a new scanner for the console, and pass it to the function.
+The function prompts the user for their full name using the scanner,
+and then prints it last name, first name order
+Maintenance log:
 2/13/18: Project created
+2/14/18: Realized there was a misunderstanding of the requirements after looking at the book,
+fixed function
 */
 
 import java.util.Scanner;
@@ -17,18 +19,13 @@ public class ProcessName {
 
 	public static void main(String[] args) 
 	{
-		String name = processName(new Scanner(System.in));
-		for(int c = name.length() - 1; c >= 0; c--)
-		{
-			System.out.print(name.charAt(c));
-		}
-		System.out.println();
+		processName(new Scanner(System.in));
 	}
 
-	private static String processName(Scanner scanner)
+	private static void processName(Scanner scanner)
 	{
 		System.out.println("What is your full name?");
 		String name = scanner.nextLine();
-		return name;
+		System.out.printf("Reverse: %s, %s", name.substring(name.lastIndexOf(" ") + 1), name.substring(0, name.lastIndexOf(" ")));
 	}
 }

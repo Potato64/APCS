@@ -14,6 +14,7 @@ the number is returned.
 Maintenance Log:
 2/3/18: Project created
 2/4/18: Removed extra spaces from the dictionary
+Get memed
 */
 
 import java.io.File;
