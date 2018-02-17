@@ -12,6 +12,7 @@ Maintenance log:
 Regex function created
 2/15/18: Loop function created
 Regex function modified to be less buggy
+Regex function changed to be better
 */
 
 import java.util.Scanner;
@@ -43,7 +44,8 @@ public class StringDivider {
 
 	public static void stringDivider2(String string, int num)
 	{
-		String[] parts = string.split("(?<=^(.{" + num + "}){1," + string.length() / num + "})");
+		//String[] parts = string.split("(?<=^(.{" + num + "}){1," + string.length() / num + "})");
+		String[] parts = string.split("(?<=\\G.{" + num + "})");
 		for (int c = 0; c < parts.length; c++)
 		{
 			System.out.println(parts[c]);
