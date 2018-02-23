@@ -14,6 +14,7 @@ with leading spaces so they are below their previous position when printed.
 The array is then printed
 Maintenance Log:
 2/15/18: Project created
+2/16/18: Fixed bug with adding an extra space
 */
 
 public class StairString {
@@ -38,10 +39,13 @@ public class StairString {
 		{
 			substrings[c / substringLength] = String.format("%" + (c + substringLength) + "s", string.substring(c, substringLength + c));
 		}
-		substrings[lines - 1] = String.format("%" + (string.length()) + "s", string.substring(c));
+		substrings[((double)string.length() / lines > 1) ? lines - 1 : c] = String.format("%" + (string.length()) + "s", string.substring(c));
 		for (c = 0; c < lines; c++)
 		{
-			System.out.println(substrings[c]);
+			if (substrings[c] != null)
+			{
+				System.out.println(substrings[c]);
+			}
 		}
 	}
 }
