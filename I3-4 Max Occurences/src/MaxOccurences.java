@@ -41,10 +41,6 @@ public class MaxOccurences {
 
 	public static int maxOccurences(ArrayList<Integer> list)
 	{
-		if (list.size() == 0)
-		{
-			return 0;
-		}
 		HashMap<Integer, Integer> map = new HashMap<Integer, Integer>();
 		for (int num : list)
 		{
